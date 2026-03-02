@@ -2,6 +2,24 @@
 
 A [Claude Code skill](https://docs.anthropic.com/en/docs/claude-code/skills) that turns Claude into a thorough research agent. It creates a structured investigation plan, spawns parallel subagents to research different threads simultaneously, maintains persistent markdown files as working memory, and produces a final report.
 
+## Install
+
+Clone this repo into your Claude Code skills directory:
+
+```bash
+git clone https://github.com/faustow/investigate-and-report.git ~/.claude/skills/investigate-and-report
+```
+
+## Usage
+
+In any Claude Code session, type:
+
+```
+/investigate-and-report
+```
+
+Then describe what you want investigated. Claude will ask clarifying questions if needed, then begin the investigation autonomously.
+
 ## How it works
 
 When you invoke `/investigate-and-report`, Claude follows a 4-phase workflow:
@@ -20,24 +38,6 @@ Throughout the investigation, Claude maintains three working memory files:
 | `progress.md`  | Checkpoint — enables recovery after context compaction     |
 
 These files act as persistent memory, ensuring the investigation can survive context window limits and pick up where it left off.
-
-## Install
-
-Clone this repo into your Claude Code skills directory:
-
-```bash
-git clone https://github.com/faustow/investigate-and-report.git ~/.claude/skills/investigate-and-report
-```
-
-## Usage
-
-In any Claude Code session, type:
-
-```
-/investigate-and-report
-```
-
-Then describe what you want investigated. Claude will ask clarifying questions if needed, then begin the investigation autonomously.
 
 ### Example prompts
 
@@ -73,7 +73,7 @@ Subagents write their results to a `research/` folder, which the orchestrator sy
 
 ## Credits
 
-The context engineering principles in this skill draw from [Manus AI's context engineering research](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus), Anthropic's agent guidance, and production agent patterns from 2025-2026.
+The context engineering principles in this skill draw from [Manus AI's context engineering research](https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus) (acquired by Meta for $2B, December 2025), Anthropic's agent guidance, and production agent patterns from 2025-2026.
 
 ## License
 
