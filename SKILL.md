@@ -110,6 +110,7 @@ Subagents are your primary tool for deep investigation. Do not optimize for toke
 4. Use `run_in_background: true` for parallel research
 5. Use `model: "haiku"` for quick lookups, default (sonnet) for analysis
 6. For substantial research, instruct the subagent to write results to `research/<thread-name>.md`
+7. **Vary your prompts** — Don't copy-paste the same template with different topics. Rephrase, restructure, and approach from different angles across subagent batches to prevent pattern fixation.
 
 ### Result Persistence
 
