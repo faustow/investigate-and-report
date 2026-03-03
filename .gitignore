@@ -1,8 +1,8 @@
 .DS_Store
 
 # Investigation output files (generated at runtime)
-research/
-task_plan.md
-findings.md
-progress.md
-investigation-report.md
+/research/
+/task_plan.md
+/findings.md
+/progress.md
+/investigation-report.md
